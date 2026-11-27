@@ -48,7 +48,6 @@ var OPS=[
  ['box','Malzeme',['Stok say','Kritik seviye belirle','Oyuncuya beden bilgisiyle zimmetle','İadeyi kaydet']]
 ];
 var OPSUM=['Kayıt, lisans, sakatlık ve geçmiş, hepsi oyuncu kartında.','Yoklamadan idman planına, antrenörün günlük işi.','Fikstürden maç raporuna, kadro kuralları dahil.','Aidat ve sponsor gelirleri, giderler ve net özet.','Fiziksel testten dönem karnesine, veliyle paylaşılır.','Stok, kritik seviye ve oyuncu bazlı zimmet.'];
-function tryChips(){return '<div class="try"><span>Yoklamada bir oyuncuya tıkla</span><span>Aidatı ödendi yap</span><span>Kadroda kuralları boz, uyarıyı gör</span><span>Rolü Veli’ye çevir</span></div>';}
 /* ---------------- ANA SAYFA ---------------- */
 var REFS=[
  {name:'Altınşehir SK',role:'İlk kulübümüz',q:'[Kulüp yönetiminden kısa bir yorum eklenecek]',tag:'Yorum bekleniyor'},
@@ -198,13 +197,4 @@ html:function(){
    '<div class="row c3">'+[['Adresini seç','Kulüp adının kısa halini yaz. Örneğin kulubun-adi.kulupgo.com.'],['Adını, rengini ve logonu ekle','Siteyi kulübünün kimliğine göre ayarla.'],['Maç gir, site güncellensin','Panele girdiğin fikstür ve skorlar sitede görünür.']].map(function(x,i){return '<div class="card"><span class="bigscore">'+(i+1)+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>';}).join('')+'</div></div></section>';
   return h+ctaBand('Kulübünün sitesini bir akşamda kur.');
 }};
-
-/* ---------------- CANLI DEMO ---------------- */
-P['_canli-demo']={title:'Canlı demo | KulüpGO',
-html:function(){
-  return '<section class="hero"><div class="wrap"><span class="eyebrow">Canlı demo</span><h1>Paneli kendin dene.</h1><p class="lead">Aşağıdaki panel örnek verilerle gerçekten çalışır. Yoklama al, aidat işle, maç kadrosu hazırla. Sonra rolü değiştirip velinin ne gördüğüne bak.</p></div></section>'+
-  '<section style="padding:24px 0 120px"><div class="wrap"><div id="demo-root"></div>'+tryChips()+'</div></section>'+
-  '<section class="sec paper"><div class="wrap split"><div>'+secHead('Demoda neler var','Gerçek kuralların aynısı.','Maç kadrosu kuralları, rol bazlı görünürlük ve işlem kaydı gerçek üründeki mantıkla çalışır. Veriler ve isimler tamamen örnektir, hiçbir şey kaydedilmez.')+'</div><ul class="ticks"><li>Maç kadrosu: 11 as, en fazla 10 yedek, tek kaleci, tek kaptan, benzersiz forma numarası</li><li>Antrenör yalnızca kendi takımını görür, gelir-gider alanı kapalıdır</li><li>Veli yalnızca kendi çocuğunu görür, karne paylaşılmadan görünmez</li><li>Her işlem “Son işlemler” kaydına yazılır</li></ul></div></section>'+ctaBand();
-},
-init:function(root){DEMO.mount(root.querySelector('#demo-root'));}};
 })();

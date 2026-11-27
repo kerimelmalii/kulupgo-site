@@ -37,7 +37,7 @@ function icon(n,sw){return '<svg viewBox="0 0 24 24" fill="none" stroke="current
 /* ---------- logo ---------- */
 function ring(){return '<svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><path d="M50.0 33.0L50.0 12.0M66.2 44.7L86.1 38.3M60.0 63.8L72.3 80.7M40.0 63.8L27.7 80.7M33.8 44.7L13.9 38.3" stroke="currentColor" stroke-width="6" stroke-linecap="butt" fill="none"/><polygon points="50.0,33.0 66.2,44.7 60.0,63.8 40.0,63.8 33.8,44.7" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>';}
 function logoMark(){return '<svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="26" fill="#101D34"/><g transform="translate(18 18) scale(.64)" style="color:#C5F438"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><path d="M50.0 33.0L50.0 12.0M66.2 44.7L86.1 38.3M60.0 63.8L72.3 80.7M40.0 63.8L27.7 80.7M33.8 44.7L13.9 38.3" stroke="currentColor" stroke-width="6" stroke-linecap="butt" fill="none"/><polygon points="50.0,33.0 66.2,44.7 60.0,63.8 40.0,63.8 33.8,44.7" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></g></svg>';}
-function logo(){return '<a class="logo" href="#" aria-label="KulüpGO ana sayfa"><span class="wm">KulüpG</span>'+ring()+'</a>';}
+function logo(){return '<a class="logo" href="#"><span class="wm">KulüpG</span>'+ring()+'<span class="sr">O ana sayfa</span></a>';}
 
 /* ---------- yardımcı ---------- */
 function poly(cx,cy,r,rot){var p=[],i,a;for(i=0;i<5;i++){a=(rot+i*72)*Math.PI/180;p.push((cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1));}return p.join(' ');}

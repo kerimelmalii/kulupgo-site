@@ -92,7 +92,7 @@ init:function(root){
 }};
 
 /* ---------------- FORM YARDIMCILARI ---------------- */
-function field(id,label,type,ph,extra){return '<div class="field"><label for="'+id+'">'+label+'</label><input id="'+id+'" name="'+id+'" type="'+(type||'text')+'" placeholder="'+(ph||'')+'" '+(extra||'')+'></div>';}
+function field(id,label,type,ph,extra){return '<div class="field"><label for="'+id+'">'+label+'</label><input id="'+id+'" name="'+id+'" type="'+(type||'text')+'" placeholder="'+(ph||'')+'" maxlength="200" '+(extra||'')+'></div>';}
 function bindForm(root,sel,msg){
   var f=root.querySelector(sel);if(!f)return;
   f.addEventListener('submit',function(e){e.preventDefault();var m=f.querySelector('.form-msg');if(m)m.innerHTML='<div class="ok-msg">'+msg+'</div>';});
@@ -106,7 +106,7 @@ html:function(){
    '<div class="f2">'+field('c-ad','Ad soyad','text','Adın','required autocomplete="name"')+field('c-mail','E-posta','email','ornek@kulup.com','required autocomplete="email"')+'</div>'+
    field('c-kulup','Kulüp adı','text','Varsa kulübünün adı')+
    '<div class="field"><label for="c-konu">Konu</label><select id="c-konu"><option>Ürün hakkında soru</option><option>Fiyat ve plan</option><option>Kurulum ve veri aktarımı</option><option>Teknik destek</option><option>İş birliği</option></select></div>'+
-   '<div class="field"><label for="c-msg">Mesajın</label><textarea id="c-msg" required></textarea></div>'+
+   '<div class="field"><label for="c-msg">Mesajın</label><textarea id="c-msg" maxlength="2000" required></textarea></div>'+
    '<button class="btn primary lg" type="submit" style="justify-self:start">Mesajı gönder '+arrow()+'</button><div class="form-msg"></div></form>'+
    '<div style="display:grid;gap:18px"><div class="card"><div class="ico">'+I('mail',2)+'</div><h4>E-posta</h4><p>[destek e-posta adresi]</p></div><div class="card"><div class="ico">'+I('phone',2)+'</div><h4>Telefon ve WhatsApp</h4><p>[telefon numarası]</p></div><div class="card"><div class="ico">'+I('pin',2)+'</div><h4>Adres</h4><p>[şirket adresi]</p></div><div class="card"><div class="ico">'+I('check',2)+'</div><h4>Çalışma saatleri</h4><p>[hafta içi çalışma saatleri]</p></div></div></div></section>';
   return h;
@@ -120,7 +120,7 @@ html:function(){
   h+='<section class="sec"><div class="wrap split" style="align-items:start"><div>'+secHead('Görüşmede','Ne konuşacağız?')+'<div class="timeline">'+[['Kulübünü dinleriz','Kaç takım, kaç oyuncu, bugün neyi nasıl yapıyorsunuz?'],['Sana uygun planı seçeriz','Başlangıç, Profesyonel veya Kulüp. Limitleri birlikte kontrol ederiz.'],['Rolleri gösteririz','Yönetici, antrenör ve veli ekranlarını canlı geziriz.'],['14 günlük denemeyi başlatırız','İstersen kulübünü o görüşmede birlikte kurarız.']].map(function(s){return '<div><h4>'+s[0]+'</h4><p class="muted">'+s[1]+'</p></div>';}).join('')+'</div></div>'+
    '<form class="form card" id="demo-form" style="box-shadow:var(--sh);padding:32px"><div class="f2">'+field('d-ad','Ad soyad','text','Adın','required')+field('d-mail','E-posta','email','ornek@kulup.com','required')+'</div><div class="f2">'+field('d-tel','Telefon','tel','05xx xxx xx xx')+field('d-kulup','Kulüp adı','text','Kulübünün adı','required')+'</div>'+
    '<div class="f2"><div class="field"><label for="d-rol">Kulüpteki rolün</label><select id="d-rol"><option>Kulüp sahibi</option><option>Yönetici</option><option>Antrenör</option><option>Diğer</option></select></div><div class="field"><label for="d-oyuncu">Yaklaşık oyuncu sayısı</label><select id="d-oyuncu"><option>60 ve altı</option><option>61–250</option><option>250 üstü</option></select></div></div>'+
-   '<div class="field"><label for="d-not">Eklemek istediğin bir şey var mı?</label><textarea id="d-not"></textarea></div><button class="btn primary lg" type="submit">Demo talep et '+arrow()+'</button><div class="form-msg"></div></form></div></section>';
+   '<div class="field"><label for="d-not">Eklemek istediğin bir şey var mı?</label><textarea id="d-not" maxlength="2000"></textarea></div><button class="btn primary lg" type="submit">Demo talep et '+arrow()+'</button><div class="form-msg"></div></form></div></section>';
   return h;
 },
 init:function(r){bindForm(r,'#demo-form','Talebin alındı. (Taslak: form henüz sunucuya bağlı değil.)');}};

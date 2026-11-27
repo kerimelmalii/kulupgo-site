@@ -1,3 +1,5 @@
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url(../fonts/manrope-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url(../fonts/manrope-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* Sporkulübüm — sade, monokrom, ferah. Beyaz zemin, açık gri kutular, siyah hap butonlar.
    Tek marka rengi: koyu yeşil (yalnızca logo ve "Sporkulübüm" sözcüğü). */
 :root{
@@ -9,7 +11,7 @@
   --g:#101D34;--g-hover:#1E3257;--lime:#C5F438;--cream:#F6F2E7;
   --body:#46464D;
   --soft:#6B6B73;
-  --faint:#8E8E96;
+  --faint:#62626A;
   --line:#E4E4E9;
   --ok:#0F8A5F;
   --err:#C8321E;
@@ -356,7 +358,7 @@ details.faq .ans{padding:0 48px 26px 0;color:var(--soft);max-width:68ch}
 /* footer */
 .ftr{margin-top:112px;border-top:1px solid var(--line);padding:68px 0 30px;color:var(--body)}
 .ftr-grid{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:36px}
-.ftr h5{font-size:.88rem;font-weight:700;color:var(--ink);margin:0 0 16px}
+.ftr .fh{font-size:.88rem;font-weight:700;color:var(--ink);margin:0 0 16px}
 .ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .ftr a{text-decoration:none;color:var(--soft);font-size:.95rem}
 .ftr a:hover{color:var(--ink);text-decoration:underline}
@@ -521,3 +523,6 @@ details.faq .ans{padding:0 48px 26px 0;color:var(--soft);max-width:68ch}
   .dark,.green,.cta-band{border-radius:30px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}.marq{overflow-x:auto}.marq-track{animation:none}}
+
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0}
