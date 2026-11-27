@@ -166,7 +166,7 @@ section{position:relative}
 .op-n{font-size:.85rem;font-weight:600;color:var(--soft);transition:color .35s}
 .op-bot h3{font-size:1.5rem;letter-spacing:-.03em;transition:color .35s}
 .op-bot p{margin-top:6px;color:var(--soft);font-size:.98rem;line-height:1.5;max-width:30ch;transition:opacity .25s,max-height .35s,margin .35s;max-height:3.2em}
-.op ul{position:absolute;left:28px;right:28px;top:96px;margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:.98rem;color:#D3DAE8;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .3s,transform .35s}
+.op ul{position:absolute;left:28px;right:28px;top:96px;margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:.98rem;color:#fff;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .3s,transform .35s}
 .op li{display:flex;gap:11px;align-items:flex-start;line-height:1.4}
 .op li:before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--lime);margin-top:.55em}
 .op:hover,.op:focus-visible{background:var(--g);transform:translateY(-4px)}
