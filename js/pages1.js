@@ -76,8 +76,9 @@ html:function(){
    '<div class="marq" aria-label="Referans kulüpler"><div class="marq-track">'+REFS.map(refCard).join('')+'<span style="display:contents" aria-hidden="true">'+REFS.map(refCard).join('')+'</span></div></div>'+
    '<p style="text-align:center;margin-top:28px"><a class="link" href="#referanslar">Tüm referanslar</a></p></section>';
 
-  h+='<section class="sec"><div class="wrap">'+secHead('Üç rol, tek veri','Herkes yalnızca kendi işini görür.','Yönetici kulübü, antrenör takımını, veli çocuğunu görür. Yetki uygulamada değil, veritabanında uygulanır.')+
-   '<div class="row c3">'+D.ROLES.map(function(r,i){return '<a class="card hoverable" href="#panel" style="text-decoration:none"><div style="width:120px;margin:-8px 0 0 -8px">'+SK.art(['flag','cards','bib'][i])+'</div><h3>'+r.name+'</h3><span class="tag" style="align-self:flex-start">'+r.short+'</span><p>'+r.desc+'</p><span class="link" style="align-self:flex-start;margin-top:auto">Ekranları gör</span></a>';}).join('')+'</div></div></section>';
+  var RI={yonetici:'building',antrenor:'whistle',veli:'eye'};
+  h+='<section class="sec dark"><div class="wrap">'+secHead('Üç rol, tek veri','Herkes yalnızca kendi işini görür.','Yönetici kulübü, antrenör takımını, veli çocuğunu görür. Yetki uygulamada değil, veritabanında uygulanır.')+
+   '<div class="row c3">'+D.ROLES.map(function(r){return '<a class="role" href="#panel"><span class="ico">'+I(RI[r.id],1.6)+'</span><h3>'+r.name+'</h3><span class="tag">'+r.short+'</span><ul>'+r.pts.slice(0,3).map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><span class="link">Ekranları gör</span></a>';}).join('')+'</div></div></section>';
 
   h+='<section class="sec paper"><div class="wrap split"><div>'+secHead('Maç günü','Maç kadron tek ekranda, kurallar arka planda.','11 asıl oyuncu, en fazla 10 yedek, maça özel forma numaraları, tek kaleci ve tek kaptan. Maç bitince her oyuncunun dakikası, golü ve kartları olaylardan hesaplanır.')+
    '<ul class="ticks"><li>Rakip analizi ve maç raporu yalnızca personele açık</li><li>Maç kadrosunu yalnızca o takımın antrenörü yazar</li><li>Veli çocuğunun maç istatistiğini kendi ekranında görür</li></ul><p style="margin-top:28px"><a class="btn" href="#ozellikler">Maç modülünü incele</a></p></div>'+
