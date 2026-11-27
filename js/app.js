@@ -2,7 +2,7 @@
 (function(){
 var P=window.PAGES,I=SK.icon;
 var NAV=[['ozellikler','Özellikler'],['fiyatlar','Fiyatlar'],['hakkimizda','Hakkımızda']];
-var MORE=[['canli-demo','Canlı demo'],['panel','Roller'],['guvenlik','Güvenlik'],['blog','Blog'],['sss','Sık sorulan sorular']];
+var MORE=[['panel','Roller'],['guvenlik','Güvenlik'],['blog','Blog'],['sss','Sık sorulan sorular']];
 function link(h,t){return '<a href="#'+h+'">'+t+'</a>';}
 function shell(){
   var app=document.getElementById('shell');
@@ -15,7 +15,7 @@ function shell(){
   '<button class="burger" id="burger" type="button" aria-label="Menüyü aç" aria-expanded="false">'+I('menu',2)+'</button></div></header>'+
   '<main id="icerik" tabindex="-1"></main>'+
   '<footer class="ftr"><div class="wrap"><div class="ftr-grid"><div>'+SK.logo()+'<p>Futbol kulüpleri için yönetim yazılımı. Oyuncu, idman, maç, aidat ve malzeme tek panelde.</p></div>'+
-  '<div><h5>Ürün</h5><ul><li>'+link('ozellikler','Özellikler')+'</li><li>'+link('canli-demo','Canlı demo')+'</li><li>'+link('panel','Roller ve ekranlar')+'</li><li>'+link('fiyatlar','Fiyatlar')+'</li><li>'+link('guvenlik','Güvenlik')+'</li><li>'+link('web-sitesi','Kulüp web sitesi')+'</li></ul></div>'+
+  '<div><h5>Ürün</h5><ul><li>'+link('ozellikler','Özellikler')+'</li><li>'+link('panel','Roller ve ekranlar')+'</li><li>'+link('fiyatlar','Fiyatlar')+'</li><li>'+link('guvenlik','Güvenlik')+'</li><li>'+link('web-sitesi','Kulüp web sitesi')+'</li></ul></div>'+
   '<div><h5>Şirket</h5><ul><li>'+link('hakkimizda','Hakkımızda')+'</li><li>'+link('referanslar','Referanslar')+'</li><li>'+link('blog','Blog')+'</li><li>'+link('iletisim','İletişim')+'</li><li>'+link('demo','Demo talep et')+'</li></ul></div>'+
   '<div><h5>Destek</h5><ul><li>'+link('sss','Sık sorulan sorular')+'</li><li>'+link('giris','Giriş yap')+'</li><li>'+link('kayit','14 gün ücretsiz dene')+'</li></ul></div>'+
   '<div><h5>Hukuki</h5><ul><li>'+link('gizlilik','Gizlilik politikası')+'</li><li>'+link('kvkk','KVKK aydınlatma metni')+'</li><li>'+link('mesafeli-satis','Mesafeli satış sözleşmesi')+'</li><li>'+link('iade','İptal ve iade')+'</li></ul></div></div>'+

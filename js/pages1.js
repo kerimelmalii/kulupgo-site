@@ -66,18 +66,17 @@ html:function(){
    '<p class="lead rise d2">Kulübünün tüm işlemleri tek platformda: oyuncu, idman, maç, aidat ve malzeme. Her rol kendi ekranından bakar.</p>'+
    '<div class="hero-cta rise d3"><a class="btn primary lg" href="#kayit">14 gün ücretsiz dene</a><a class="btn lg" href="#demo">Demo talep et</a></div>'+
    '<p class="hero-note rise d3">14 günlük deneme · Aylık 499 TL’den başlayan planlar</p></div></section>';
-  h+='<section style="padding:32px 0 96px"><div class="wrap"><div id="demo-root"></div>'+tryChips()+'</div></section>';
+
+  h+='<section class="sec paper"><div class="wrap">'+secHead('Neler sunuyoruz','Her işlem, tek yerde.','Kulübünde yaptığın her iş bir modülde yazılı. Bir işlemi bir kez girersin, gerisi kendiliğinden güncellenir.',true)+
+   '<div class="ops">'+OPS.map(function(o,i){return '<div><div class="ops-art">'+SK.art(OPSART[i])+'</div><h3>'+o[1]+'</h3><ul>'+o[2].map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
+   '<p style="margin-top:40px;text-align:center"><a class="link" href="#ozellikler">Tüm özellikleri gör</a></p></div></section>';
 
   h+='<section style="padding:0"><div class="wrap" style="text-align:center;margin-bottom:36px"><span class="eyebrow">Referanslar</span><h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Sahadaki kulüplerden.</h2></div>'+
    '<div class="marq" aria-label="Referans kulüpler"><div class="marq-track">'+REFS.map(refCard).join('')+'<span style="display:contents" aria-hidden="true">'+REFS.map(refCard).join('')+'</span></div></div>'+
    '<p style="text-align:center;margin-top:28px"><a class="link" href="#referanslar">Tüm referanslar</a></p></section>';
 
-  h+='<section class="sec paper"><div class="wrap">'+secHead('Tek platform','Her işlem, tek yerde.','Kulübünde yaptığın her iş bir modülde yazılı. Bir işlemi bir kez girersin, gerisi kendiliğinden güncellenir.',true)+
-   '<div class="ops">'+OPS.map(function(o,i){return '<div><div class="ops-art">'+SK.art(OPSART[i])+'</div><h3>'+o[1]+'</h3><ul>'+o[2].map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
-   '<p style="margin-top:40px;text-align:center"><a class="link" href="#ozellikler">Tüm özellikleri gör</a></p></div></section>';
-
   h+='<section class="sec"><div class="wrap">'+secHead('Üç rol, tek veri','Herkes yalnızca kendi işini görür.','Yönetici kulübü, antrenör takımını, veli çocuğunu görür. Yetki uygulamada değil, veritabanında uygulanır.')+
-   '<div class="row c3">'+D.ROLES.map(function(r,i){return '<a class="card hoverable" href="#canli-demo" style="text-decoration:none"><div style="width:120px;margin:-8px 0 0 -8px">'+SK.art(['flag','cards','bib'][i])+'</div><h3>'+r.name+'</h3><span class="tag" style="align-self:flex-start">'+r.short+'</span><p>'+r.desc+'</p><span class="link" style="align-self:flex-start;margin-top:auto">Demoda dene</span></a>';}).join('')+'</div></div></section>';
+   '<div class="row c3">'+D.ROLES.map(function(r,i){return '<a class="card hoverable" href="#panel" style="text-decoration:none"><div style="width:120px;margin:-8px 0 0 -8px">'+SK.art(['flag','cards','bib'][i])+'</div><h3>'+r.name+'</h3><span class="tag" style="align-self:flex-start">'+r.short+'</span><p>'+r.desc+'</p><span class="link" style="align-self:flex-start;margin-top:auto">Ekranları gör</span></a>';}).join('')+'</div></div></section>';
 
   h+='<section class="sec paper"><div class="wrap split"><div>'+secHead('Maç günü','Maç kadron tek ekranda, kurallar arka planda.','11 asıl oyuncu, en fazla 10 yedek, maça özel forma numaraları, tek kaleci ve tek kaptan. Maç bitince her oyuncunun dakikası, golü ve kartları olaylardan hesaplanır.')+
    '<ul class="ticks"><li>Rakip analizi ve maç raporu yalnızca personele açık</li><li>Maç kadrosunu yalnızca o takımın antrenörü yazar</li><li>Veli çocuğunun maç istatistiğini kendi ekranında görür</li></ul><p style="margin-top:28px"><a class="btn" href="#ozellikler">Maç modülünü incele</a></p></div>'+
@@ -199,7 +198,7 @@ html:function(){
 }};
 
 /* ---------------- CANLI DEMO ---------------- */
-P['canli-demo']={title:'Canlı demo | KulüpGO',
+P['_canli-demo']={title:'Canlı demo | KulüpGO',
 html:function(){
   return '<section class="hero"><div class="wrap"><span class="eyebrow">Canlı demo</span><h1>Paneli kendin dene.</h1><p class="lead">Aşağıdaki panel örnek verilerle gerçekten çalışır. Yoklama al, aidat işle, maç kadrosu hazırla. Sonra rolü değiştirip velinin ne gördüğüne bak.</p></div></section>'+
   '<section style="padding:24px 0 120px"><div class="wrap"><div id="demo-root"></div>'+tryChips()+'</div></section>'+
