@@ -47,6 +47,7 @@ var OPS=[
  ['chart','Gelişim',['Fiziksel test kaydet','Takım ortalamasını gör','Dönemlik karne yaz','Karneyi veliyle paylaş']],
  ['box','Malzeme',['Stok say','Kritik seviye belirle','Oyuncuya beden bilgisiyle zimmetle','İadeyi kaydet']]
 ];
+var OPSUM=['Kayıt, lisans, sakatlık ve geçmiş, hepsi oyuncu kartında.','Yoklamadan idman planına, antrenörün günlük işi.','Fikstürden maç raporuna, kadro kuralları dahil.','Aidat ve sponsor gelirleri, giderler ve net özet.','Fiziksel testten dönem karnesine, veliyle paylaşılır.','Stok, kritik seviye ve oyuncu bazlı zimmet.'];
 function tryChips(){return '<div class="try"><span>Yoklamada bir oyuncuya tıkla</span><span>Aidatı ödendi yap</span><span>Kadroda kuralları boz, uyarıyı gör</span><span>Rolü Veli’ye çevir</span></div>';}
 /* ---------------- ANA SAYFA ---------------- */
 var REFS=[
@@ -68,7 +69,7 @@ html:function(){
    '<p class="hero-note rise d3">14 günlük deneme · Aylık 499 TL’den başlayan planlar</p></div></section>';
 
   h+='<section class="sec paper"><div class="wrap">'+secHead('Neler sunuyoruz','Her işlem, tek yerde.','Kulübünde yaptığın her iş bir modülde yazılı. Bir işlemi bir kez girersin, gerisi kendiliğinden güncellenir.',true)+
-   '<div class="ops">'+OPS.map(function(o,i){return '<div><div class="ops-art">'+SK.art(OPSART[i])+'</div><h3>'+o[1]+'</h3><ul>'+o[2].map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
+   '<div class="ops">'+OPS.map(function(o,i){return '<div class="op" tabindex="0"><div class="op-top"><span class="ico">'+I(o[0],1.6)+'</span><span class="op-n">'+o[2].length+' özellik</span></div><ul>'+o[2].map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><div class="op-bot"><h3>'+o[1]+'</h3><p>'+OPSUM[i]+'</p></div></div>';}).join('')+'</div>'+
    '<p style="margin-top:40px;text-align:center"><a class="link" href="#ozellikler">Tüm özellikleri gör</a></p></div></section>';
 
   h+='<section style="padding:0"><div class="wrap" style="text-align:center;margin-bottom:36px"><span class="eyebrow">Referanslar</span><h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Sahadaki kulüplerden.</h2></div>'+
@@ -95,7 +96,7 @@ html:function(){
   h+=ctaBand();
   return h;
 },
-init:function(root){DEMO.mount(root.querySelector('#demo-root'));}};
+init:function(){}};
 
 function postCard(p){
   return '<a class="post-card" href="#blog-'+p.slug+'"><div class="post-art">'+SK.postArt(p.art)+'</div><div class="post-body"><div class="meta"><span class="tag y">'+p.cat+'</span><span>'+p.min+' dk okuma</span></div><h3>'+p.title+'</h3><p>'+p.sum+'</p></div></a>';

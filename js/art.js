@@ -32,7 +32,7 @@ bolt:'M13 2L4 14h7l-1 8 9-12h-7z',
 list:'M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1',
 whistle:'M3 10h10a6 6 0 1 1-4.5 10M3 10l3-3h7M10 14a2 2 0 1 0 0 .1'
 };
-function icon(n,sw){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+(sw||2)+'" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="'+ICONS[n]+'"/></svg>';}
+function icon(n,sw){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+(sw||2)+'" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="'+ICONS[n]+'"/></svg>';}
 
 /* ---------- logo ---------- */
 function ring(){return '<svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="10"/><path d="M50.0 33.0L50.0 12.0M66.2 44.7L86.1 38.3M60.0 63.8L72.3 80.7M40.0 63.8L27.7 80.7M33.8 44.7L13.9 38.3" stroke="currentColor" stroke-width="6" stroke-linecap="butt" fill="none"/><polygon points="50.0,33.0 66.2,44.7 60.0,63.8 40.0,63.8 33.8,44.7" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>';}
